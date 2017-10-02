@@ -16,34 +16,33 @@ for linea in fichero.readlines():
 
     resultado = int(operandos[0])
     operandos = operandos[1:]
-    
+
     if operacion == "suma":
-        
+
         for suma in operandos:
-            resultado = datos.plus((resultado),int(suma))
-        
+            resultado = datos.plus((resultado), int(suma))
+
         print(resultado)
-        
+
     elif operacion == "resta":
-        
+
         for resta in operandos:
-            resultado = datos.minus((resultado),int(resta))
-            
+            resultado = datos.minus((resultado), int(resta))
+
         print(resultado)
-        
-        
+
     elif operacion == "multiplica":
-        
+
         for multiplica in operandos:
-            resultado = datos.multiplication((resultado),int(multiplica)) 
-            
+            resultado = datos.multiplication((resultado), int(multiplica))
+
         print(resultado)
 
     elif operacion == "divide":
 
         for divide in operandos:
-            resultado = datos.division((resultado),int(divide))
-            
+            resultado = datos.division((resultado), int(divide))
+
         print(resultado)
-        
+
     fichero.close()
