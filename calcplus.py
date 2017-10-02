@@ -15,52 +15,35 @@ for linea in fichero.readlines():
 
     datos = calcoohija.CalculadoraHija()
 
+    resultado = int(operandos[0])
+    operandos = operandos[1:]
+    
     if operacion == "suma":
         
-        i = 1
-        resultado = operandos[0]
+        for suma in operandos:
+            resultado = datos.plus((resultado),int(suma))
         
-        while i < len(operandos):
-           
-            resultado = datos.plus(int(resultado),int(operandos[i]))
-            i = i + 1
-            
         print(resultado)
         
     elif operacion == "resta":
         
-        i = 1
-        resultado = operandos[0]
-
-        while i < len(operandos):
-            
-            resultado = datos.minus(int(resultado),int(operandos[i]))
-            i = i + 1
+        for resta in operandos:
+            resultado = datos.minus((resultado),int(resta))
             
         print(resultado)
         
         
     elif operacion == "multiplica":
         
-        i = 0
-        resultado = 1
-        
-        while i < len(operandos):
-           
-            resultado = datos.multiplication(int(resultado),int(operandos[i]))
-            i = i + 1
+        for multiplica in operandos:
+            resultado = datos.multiplication((resultado),int(multiplica)) 
             
         print(resultado)
 
     elif operacion == "divide":
 
-        i = 1
-        resultado = operandos[0]
-        
-        while i < len(operandos):
-           
-            resultado = datos.division(int(resultado),int(operandos[i]))
-            i = i + 1
+        for divide in operandos:
+            resultado = datos.division((resultado),int(divide))
             
         print(resultado)
         
