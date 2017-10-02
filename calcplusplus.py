@@ -32,7 +32,6 @@ for linea in fichero.readlines():
             
         print(resultado)
         
-        
     elif operacion == "multiplica":
         
         for multiplica in operandos:
