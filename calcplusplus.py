@@ -47,4 +47,4 @@ for linea in fichero.readlines():
             
         print(resultado)
         
-    fichero.close()
+fichero.close()
