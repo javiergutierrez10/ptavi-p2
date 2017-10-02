@@ -4,7 +4,7 @@
 import sys
 import calcoohija
 
-fichero = open('fichero.txt', 'r')
+fichero = open('fichero.csv', 'r')
 
 linea = fichero.readline()
 lista = linea.split(',')
@@ -15,18 +15,52 @@ operandos = lista[1:]
 datos = calcoohija.CalculadoraHija()
 
 if operacion == "suma":
-
-    resultado = datos.plus(int(operandos[0]),int(operandos[1]))
+    
+    i = 1
+    resultado = operandos[0]
+    
+    while i < len(operandos):
+       
+        resultado = datos.plus(int(resultado),int(operandos[i]))
+        i = i + 1
+        
+    print(resultado)
     
 elif operacion == "resta":
-
-    resultado = datos.minus(int(operandos[0]),int(operandos[1]))
-  
-elif operacion == "multiplica":
-
-    resultado = datos.multiplication(int(operandos[0]),int(operandos[1]))
     
-print(resultado)
+    i = 1
+    resultado = operandos[0]
 
+    while i < len(operandos):
+        
+        resultado = datos.minus(int(resultado),int(operandos[i]))
+        i = i + 1
+        
+    print(resultado)
+    
+    
+elif operacion == "multiplica":
+    
+    i = 0
+    resultado = 1
+    
+    while i < len(operandos):
+       
+        resultado = datos.multiplication(int(resultado),int(operandos[i]))
+        i = i + 1
+        
+    print(resultado)
+
+elif operacion == "divide":
+
+    i = 1
+    resultado = operandos[0]
+    
+    while i < len(operandos):
+       
+        resultado = datos.division(int(resultado),int(operandos[i]))
+        i = i + 1
+        
+    print(resultado)
     
 fichero.close()
