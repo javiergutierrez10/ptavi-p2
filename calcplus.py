@@ -6,7 +6,6 @@ import calcoohija
 
 fichero = open('fichero.csv', 'r')
 
-#linea = fichero.readline()
 for linea in fichero.readlines():
     lista = linea.split(',')
 
